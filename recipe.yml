@@ -1,0 +1,19 @@
+name : Install Redis on Ubunutu 16.04
+desc : The recipe installs the redis service to Ubunutu 16.04 box  
+ 
+task:
+
+  - name: Install redis server
+    cmd:
+        - export DEBIAN_FRONTEND=noninteractive
+        - sudo apt-get -y update
+        - sudo apt-get -y upgrade
+        - sudo apt-get -y install redis-server  
+        - echo Done installing redis server       
+          
+  - name: Copy redis config file 
+    copy: 
+         src_file: redis-conf/redis.conf
+         target_dir: /etc/redis/
+         target_file_name : redis.conf
+  
