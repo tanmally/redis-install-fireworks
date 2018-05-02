@@ -1,6 +1,11 @@
 name : Install Redis on Ubunutu 16.04
 desc : The recipe installs the redis service to Ubunutu 16.04 box  
 logo_url: http://link.to.public.image
+tags:
+    - redis
+    - install
+    - latest
+    - Ubunutu 16.04
  
 task:
 
